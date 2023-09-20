@@ -13,7 +13,7 @@ int handle_file(char *filename)
 	ssize_t bytes = 0;
 
 	if (filename == NULL)
-		return (127);
+		return (2);
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 	{
@@ -22,7 +22,7 @@ int handle_file(char *filename)
 		error_out(FILENME, useless, err_msg, "No such file", NULL);
 		free(err_msg);
 		free(useless);
-		return (127);
+		return (2);
 	}
 
 	while (1)
