@@ -1,0 +1,4 @@
+echo alx; ls -a
+env
+ls -as
+echo $$ ; echo $PWD;

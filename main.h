@@ -11,6 +11,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <sys/stat.h>
+#include <fcntl.h>
 #include <dirent.h>
 #include <errno.h>
 
@@ -25,6 +26,8 @@ char *ret_line();
 int _putchar(char c);
 void _print(char *str);
 void error_out(char *filename, ...);
+
+int handle_file(char *filename);
 
 size_t _strlen(const char *s);
 int check_space(char *str, char *delim);

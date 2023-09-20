@@ -22,6 +22,7 @@ int main(int argc, char *argv[])
 	else
 	{
 		/*handle file arguments*/
+		xstat = handle_file(argv[1]);
 	}
 
 	free_arr(envpath);
