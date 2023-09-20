@@ -1,0 +1,10 @@
+#include "main.h"
+
+#include "h_funcs/helps.c"
+#include "h_funcs/imported_funcs.c"
+#include "h_funcs/r_extra.c"
+#include "h_funcs/slice_str.c"
+#include "h_funcs/str_cmp.c"
+#include "h_funcs/str_join.c"
+#include "h_funcs/_putchar.c"
+#include "h_funcs/global_variables.c"
