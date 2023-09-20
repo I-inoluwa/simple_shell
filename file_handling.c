@@ -9,8 +9,7 @@
 int handle_file(char *filename)
 {
 	char c, *file_lines = NULL, *err_msg = NULL, *useless = NULL;
-	int i = 0, fd = 0, xstat = -1;
-	ssize_t bytes = 0;
+	int i = 0, fd = 0, xstat = -1, bytes = 0;
 
 	if (filename == NULL)
 		return (2);
@@ -19,12 +18,14 @@ int handle_file(char *filename)
 	{
 		err_msg = join_strs("cannot open", filename, " ");
 		useless = num_to_str(RC);
-		error_out(FILENME, useless, err_msg, "No such file", NULL);
+		if (!(S_IRUSR || S_IRGRP || S_IROTH))
+			error_out(FILENME, useless, err_msg, "Invalid access", NULL);
+		else
+			error_out(FILENME, useless, err_msg, "No such file", NULL);
 		free(err_msg);
 		free(useless);
 		return (2);
 	}
-
 	while (1)
 	{
 		file_lines = malloc(sizeof(char) * 1024);

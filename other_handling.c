@@ -74,7 +74,7 @@ char *handle_variable(char *line)
 			kp_line = _getenv(new);
 			free(new);
 			if (kp_line == NULL)
-				new = _strdup(" ");
+				new = _strdup("");
 			else
 			{
 				new = _strdup(kp_line);

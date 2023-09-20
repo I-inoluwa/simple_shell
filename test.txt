@@ -1,3 +1,4 @@
 echo alx; ls -a
 ls -as
 echo $$ ; echo $PWD;
+gh

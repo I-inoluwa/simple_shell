@@ -111,13 +111,16 @@ int handle_comments(char *line)
 	{
 		if (line[ind] == '#')
 		{
-			if (!(is_in_quote(ind, line)))
-			{
-				new_args = _str_slice(line, 0, ind - 1);
-				xstat = start_parse(new_args);
+			if (ind == 0)
+				return (0);
+			if (ind > 0 && line[ind - 1] == ' ')
+				if (!(is_in_quote(ind, line)))
+				{
+					new_args = _str_slice(line, 0, ind - 1);
+					xstat = start_parse(new_args);
 
-				return (xstat);
-			}
+					return (xstat);
+				}
 		}
 
 		ind++;
