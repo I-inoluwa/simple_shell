@@ -66,7 +66,7 @@ int handle_semicolon(char *line)
 				if (new_args == NULL)
 				{
 					useless = num_to_str(RC);
-					error_out(FILENME, useless, "Syntax error", "\";\" unexpected", NULL);
+					/*error_out(FILENME, useless, "Syntax error", "\";\" unexpected", NULL);*/
 					free(useless);
 					return (2);
 				}
