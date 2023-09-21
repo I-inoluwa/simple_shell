@@ -20,7 +20,7 @@ int start_parse(char *line)
 	if (handle_space(line))
 	{
 		free(line);
-		return (0);
+		return (137);
 	}
 
 	for (ind = 0; ind < 4; ind++)
