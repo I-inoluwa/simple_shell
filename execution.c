@@ -4,7 +4,7 @@
  * start_execution - handles the execve section of the shell;
  * @args: the array of commands (command + args) to the executed;
  * @path: the path to the command to be executed;
- * Return: returns the exit status;
+ * Return: returns the exit status, xstat;
  */
 
 int start_execution(char *args[], char *path)

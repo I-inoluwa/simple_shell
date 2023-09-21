@@ -3,7 +3,7 @@
 /**
  * handle_exit - function to handle exit command;
  * @array: array of command line arguments;
- * @line: input command;
+ * @line: input command-line string;
  * Return: (2) or (-1) on failure;
  */
 

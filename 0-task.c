@@ -2,7 +2,7 @@
 
 /**
  * handle_kill - signal for handling (ctrl + c) exit;
- * @signal: signal to be handled;
+ * @signal: ctrl signal to be handled;
  * Return: returns void;
  */
 

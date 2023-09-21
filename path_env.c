@@ -4,7 +4,7 @@
  * get_path - gets the path of a command;
  * @command: string argument;
  * Return: the command, if the command is already a valid path, otherwise:
- * the path to the command, or (NULL) on failure.
+ * the path to the command, or (NULL) on failure..
  */
 
 char *get_path(char *command)

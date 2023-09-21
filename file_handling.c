@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * handle_file - handles file arguments;
+ * handle_file - handles file arguments in CLI;
  * @filename: file argument passed;
  * Return: returns xstat;
  */

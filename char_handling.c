@@ -6,7 +6,7 @@
  * @ind: first index;
  * @jnd: last index;
  * @ignstr: string to be ignored;
- * Return: integers true or false.
+ * Return: integers true (1) or false (2).
  */
 
 int ignore_str(char *str, int ind, int jnd, char *ignstr)

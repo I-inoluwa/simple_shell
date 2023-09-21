@@ -3,7 +3,7 @@
 /**
  * main - The main function of the shell;
  * @argc: count of number of inputs;
- * @argv: arguments passed to shell;
+ * @argv: arguments passed to the shell;
  * Return: Returns (0) on success;
  */
 

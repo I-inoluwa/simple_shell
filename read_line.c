@@ -3,7 +3,7 @@
 /**
  * reget_line - function that gets an extra line to the existing line;
  * @line: address of the line to be added to;
- * Return: returns an integer to indicate success (0) or failure (1);
+ * Return: returns an integer to indicate success (0), or failure (1);
  */
 
 int reget_line(char **line)
