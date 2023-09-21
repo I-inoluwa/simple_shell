@@ -20,7 +20,7 @@ int start_parse(char *line)
 	if (handle_space(line))
 	{
 		free(line);
-		return (137);
+		return (0);
 	}
 
 	for (ind = 0; ind < 4; ind++)
@@ -144,10 +144,10 @@ int handle_space(char *line)
 	if (line == NULL)
 		return (1);
 
-	for (ind = 0; (line[ind] == ' ' || line[ind] == '\t'); ind++)
+	for (ind = 0; line[ind] == ' '; ind++)
 		;
 
-	if (line[ind] == '\n')
+	if (line[ind] == '\0')
 		return (1);
 
 	return (0);
