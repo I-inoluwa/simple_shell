@@ -144,10 +144,10 @@ int handle_space(char *line)
 	if (line == NULL)
 		return (1);
 
-	for (ind = 0; line[ind] == ' '; ind++)
+	for (ind = 0; (line[ind] == ' ' || line[ind] == '\t'); ind++)
 		;
 
-	if (line[ind] == '\0')
+	if (line[ind] == '\n')
 		return (1);
 
 	return (0);
