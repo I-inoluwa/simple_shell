@@ -11,10 +11,10 @@ int start_parse(char *line)
 	char **args = NULL;
 	int xstat = 0, ind = 0;
 
-	int (*funct_ptr[3])(char *line) = {
+	int (*funct_ptr[4])(char *line) = {
 	    handle_comments,
 	    handle_OR,
-	    /*handle_AND,*/
+	    handle_AND,
 	    handle_semicolon};
 
 	if (handle_space(line))
@@ -23,7 +23,7 @@ int start_parse(char *line)
 		return (0);
 	}
 
-	for (ind = 0; ind < 3; ind++)
+	for (ind = 0; ind < 4; ind++)
 	{
 		xstat = funct_ptr[ind](line);
 		if (xstat > -1)
