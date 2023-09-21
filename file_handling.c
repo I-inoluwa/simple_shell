@@ -16,15 +16,12 @@ int handle_file(char *filename)
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 	{
-		err_msg = join_strs("cannot open", filename, " ");
+		err_msg = join_strs("Can't open", filename, " ");
 		useless = num_to_str(RC);
-		if (!(S_IRUSR || S_IRGRP || S_IROTH))
-			error_out(FILENME, useless, err_msg, "Invalid access", NULL);
-		else
-			error_out(FILENME, useless, err_msg, "No such file", NULL);
+		error_out(FILENME, useless, err_msg, NULL);
 		free(err_msg);
 		free(useless);
-		return (2);
+		return (127);
 	}
 	while (1)
 	{
