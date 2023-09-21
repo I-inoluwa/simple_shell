@@ -57,6 +57,8 @@ wc_format *is_first(wc_format *c1, wc_format *c2, char *str);
 
 int ignore_str(char *str, int ind, int jnd, char *ignstr);
 int handle_semicolon(char *line);
+int handle_OR(char *line);
+/*int handle_AND(char *line);*/
 int handle_comments(char *line);
 int handle_space(char *line);
 char **handle_wild_cards(char *line);
